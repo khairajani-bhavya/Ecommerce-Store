@@ -1,7 +1,6 @@
 # 🛒 E-Commerce Store - Full-Stack React Application
 
-A fully functional E-Commerce web application built using **React.js**, featuring user authentication, product listings, cart management, Razorpay payment integration, and a clean UI similar to platforms like **BookMyShow**.
-
+A fully functional E-Commerce web application built using **React.js**, featuring user authentication, product listings, cart management, Razorpay payment integration, and a clean UI .
 ---
 
 ## 🚀 Features
