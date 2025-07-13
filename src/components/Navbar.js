@@ -1,27 +1,46 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-// Optional if you want to isolate styling
+// Navbar.js
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+// Ensure this is imported
 
-const Navbar = () => {
+const Navbar = ({ isLoggedIn, setShowSidebar }) => {
+  const navigate = useNavigate();
+
   return (
-    <div className="navbar">
-      <h1 className="logo">SPOTIFY2.0</h1>
+    <nav className="navbar">
+      <div className="navbar-logo">
+        <Link to="/">ECOMMERCE</Link>
+      </div>
 
-      <nav className="nav-links">
-        <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
-          <span role="img" aria-label="discover">🏠</span> Discover
-        </NavLink>
-        <NavLink to="/search" className={({ isActive }) => isActive ? 'active' : ''}>
-          <span role="img" aria-label="search">🔍</span> Search
-        </NavLink>
-        <NavLink to="/playlist/rock" className={({ isActive }) => isActive ? 'active' : ''}>
-          <span role="img" aria-label="playlist">🎶</span> My Playlist
-        </NavLink>
-        <NavLink to="/genre/rock" className={({ isActive }) => isActive ? 'active' : ''}>
-          <span role="img" aria-label="genre">🎧</span> Genres
-        </NavLink>
-      </nav>
-    </div>
+      <ul className="navbar-links">
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/products">Products</Link></li>
+      
+        <li><Link to="/login">Login / Signup</Link></li>
+      </ul>
+
+      <div className="navbar-icons">
+        {/* 🛒 Cart Icon */}
+        <div
+          className="navbar-cart-icon"
+          onClick={() => navigate("/cart")}
+          title="Cart"
+        >
+          🛒 <span className="cart-label">Cart</span>
+        </div>
+
+        {/* 👤 Profile Icon */}
+        {isLoggedIn && (
+          <div
+            className="navbar-profile-icon"
+            onClick={() => setShowSidebar(true)}
+            title="Profile"
+          >
+            👤
+          </div>
+        )}
+      </div>
+    </nav>
   );
 };
 

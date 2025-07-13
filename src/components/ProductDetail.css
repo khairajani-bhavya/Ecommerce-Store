@@ -1,0 +1,93 @@
+.amazon-detail-page {
+  background-color: #fff;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.product-detail {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  gap: 40px;
+}
+
+.product-image img {
+  width: 350px;
+  border-radius: 10px;
+  object-fit: contain;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.product-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.product-info h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.rating {
+  font-size: 16px;
+  color: #f0c14b;
+  margin-bottom: 15px;
+}
+
+.price {
+  color: #B12704;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.delivery, .stock {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.stock span {
+  color: green;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.actions button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.buy-now {
+  background-color: #ffa41c;
+  color: white;
+}
+
+.add-to-cart {
+  background-color: #f0c14b;
+  color: #111;
+}
+
+.description {
+  margin-top: 30px;
+}
+
+.description h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.description ul {
+  padding-left: 20px;
+}
+
+.description ul li {
+  line-height: 1.6;
+}
